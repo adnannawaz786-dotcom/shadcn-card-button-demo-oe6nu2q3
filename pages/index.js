@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import Layout from '../components/Layout'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card'
 import { Button } from '../components/ui/button'
-import { Badge } from '../components/ui/badge'
 import { Separator } from '../components/ui/separator'
 import { Heart, Star, Share2, ShoppingCart, User, Calendar, MapPin, Clock } from 'lucide-react'
 
@@ -258,7 +257,7 @@ export default function Home() {
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="text-4xl mb-2">{product.image}</div>
-                        <Badge variant="secondary">{product.category}</Badge>
+                       
                       </div>
                       <CardTitle className="text-xl">{product.title}</CardTitle>
                       <CardDescription className="text-gray-600">
@@ -340,7 +339,7 @@ export default function Home() {
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="text-4xl mb-2">{event.image}</div>
-                        <Badge>{event.category}</Badge>
+                       
                       </div>
                       <CardTitle className="text-2xl">{event.title}</CardTitle>
                       <CardDescription
