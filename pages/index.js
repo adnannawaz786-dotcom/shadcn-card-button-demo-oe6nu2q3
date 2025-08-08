@@ -341,5 +341,4 @@ export default function Home() {
                         <div className="text-4xl mb-2">{event.image}</div>
                        
                       </div>
-                      <CardTitle className="text-2xl">{event.title}</CardTitle>
-                      <CardDescription
+                     
