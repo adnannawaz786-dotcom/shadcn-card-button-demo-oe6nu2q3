@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card'
 import { Button } from '../components/ui/button'
 import { Separator } from '../components/ui/separator'
-import { Heart, Star, Share2, ShoppingCart, User, Calendar, MapPin, Clock } from 'lucide-react'
+import { Heart, Star, Share2, ShoppingCart, Calendar, MapPin, Clock } from 'lucide-react'
 
 export default function Home() {
   const [likedCards, setLikedCards] = useState(new Set())
@@ -257,7 +257,6 @@ export default function Home() {
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="text-4xl mb-2">{product.image}</div>
-                       
                       </div>
                       <CardTitle className="text-xl">{product.title}</CardTitle>
                       <CardDescription className="text-gray-600">
@@ -339,6 +338,37 @@ export default function Home() {
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="text-4xl mb-2">{event.image}</div>
-                       
                       </div>
-                     
+                      <CardTitle className="text-xl">{event.title}</CardTitle>
+                      <CardDescription className="text-gray-600">{event.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="flex items-center gap-2 mb-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>{event.date}</span>
+                      </div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <MapPin className="w-4 h-4" />
+                        <span>{event.location}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Clock className="w-4 h-4" />
+                        <span>{event.time}</span>
+                      </div>
+                    </CardContent>
+                    <Separator />
+                    <CardFooter>
+                      <Button size="sm" variant="secondary" className="w-full">
+                        Register
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+        </div>
+      </div>
+    </Layout>
+  )
+}
